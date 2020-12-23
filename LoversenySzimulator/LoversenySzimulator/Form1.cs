@@ -15,6 +15,7 @@ namespace LoversenySzimulator
         public Form1()
         {
             InitializeComponent();
+            panelPalya.BackgroundImage = Image.FromFile("Images/runfield.jpg");
         }
     }
 }
