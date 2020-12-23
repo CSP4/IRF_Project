@@ -8,6 +8,7 @@ namespace LoversenySzimulator.Entities
 {
     class versenyzo
     {
+        public int VersenyzoID { get; set; }
         public int LoID { get; set; }
         public string LoNev { get; set; }
         public int ZsokeID { get; set; }

@@ -8,11 +8,11 @@ namespace LoversenySzimulator.Entities
 {
     class fogadas
     {
-        public int helyezes { get; set; }
-        public int versenyzoID { get; set; }
-        public int elso { get; set; }
-        public int masodik { get; set; }
-        public int harmadik { get; set; }
+        public int Helyezes { get; set; }
+        public int VersenyzoID { get; set; }
+        public int Elso { get; set; }
+        public int Masodik { get; set; }
+        public int Harmadik { get; set; }
 
     }
 }

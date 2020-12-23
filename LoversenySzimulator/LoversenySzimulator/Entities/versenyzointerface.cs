@@ -9,8 +9,7 @@ namespace LoversenySzimulator.Entities
 {
     class versenyzointerface : Button
     {
-        public string LoNev { get; set; }
-        public string ZsokeNev { get; set; }
+        public int VersenyzoID { get; set; }
 
         private bool _aktive;
 

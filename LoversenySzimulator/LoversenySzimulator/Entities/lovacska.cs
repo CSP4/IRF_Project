@@ -9,7 +9,6 @@ namespace LoversenySzimulator.Entities
 {
     class lovacska : Label
     {
-        public int LoID { get; set; }
-        public int ZsokeID { get; set; }
+        public int VersenyzoID { get; set; }
     }
 }
