@@ -1,14 +1,14 @@
 LoversenySzimulator
 
 Verseny előkészítése
-Versenyzők sorsolása/létrehozása -> versenyzo class (adatbázisból)
+Versenyzők sorsolása/létrehozása adatbázisból -> versenyzo class (versenyző adatai) 
  -> Ló hozzárendelés
  -> Zsoké hozzárendelés
  -> Versenyeredmények átlagolása és hozzárendelés
-lovacska class : label
-Versenyzők kiírása a felületre -> versenyzointerface class : button
+lovacska class : label (a versenyző képe a pályán)
+Versenyzők kiírása a felületre -> versenyzointerface class : button (kijelző versenyző adatainak)
 Fogadásitípus vállasztás
-Fogadás
+Fogadás class (a fogadás adatai)
 Verseny indítása
 Verseny szimulálása
 Verseny lezárása
