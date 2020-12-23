@@ -9,10 +9,23 @@ namespace LoversenySzimulator.Entities
     class versenyzo
     {
         public int LoID { get; set; }
-        public int LoNev { get; set; }
+        public string LoNev { get; set; }
         public int ZsokeID { get; set; }
-        public int Zsokenev { get; set; }
-        public int Eredmenyek { get; set; }
+        public string Zsokenev { get; set; }
+        public int LoEredmeny { get; set; }
+        public int ZsokeEredmeny { get; set; }
+        private int _eredmeny;
+
+        public int Eredmeny
+        {
+            get { return _eredmeny; }
+            set 
+            {
+                value = (LoEredmeny + ZsokeEredmeny) / 2;
+                _eredmeny = value; 
+            }
+        }
+
 
     }
 }
