@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\fogadas.cs" />
     <Compile Include="Entities\lovacska.cs">
       <SubType>Component</SubType>
     </Compile>
