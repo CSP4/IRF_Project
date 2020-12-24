@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoversenySzimulator.Entities
 {
-    class fogadas
+    class Fogadas
     {
         public int Helyezes { get; set; }
         public int VersenyzoID { get; set; }

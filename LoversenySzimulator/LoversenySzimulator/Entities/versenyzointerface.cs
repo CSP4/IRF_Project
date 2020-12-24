@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace LoversenySzimulator.Entities
 {
-    class versenyzointerface : Button
+    class Versenyzointerface : Button
     {
         public int VersenyzoID { get; set; }
 

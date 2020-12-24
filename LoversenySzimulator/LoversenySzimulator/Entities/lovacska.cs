@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace LoversenySzimulator.Entities
 {
-    class lovacska : Label
+    class Lovacska : Label
     {
         public int VersenyzoID { get; set; }
     }

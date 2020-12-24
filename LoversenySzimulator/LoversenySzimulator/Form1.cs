@@ -21,6 +21,7 @@ namespace LoversenySzimulator
         {
             InitializeComponent();
             panelPalya.BackgroundImage = Image.FromFile("Images/runfield.jpg");
+            
         }
 
         private void buttonUjVerseny_Click(object sender, EventArgs e)
@@ -31,15 +32,26 @@ namespace LoversenySzimulator
             buttonUjVerseny.Enabled = false;
             buttonVersenyStart.Enabled = true;
 
+
+
             Random rnd = new Random();
 
             for (int i = 0; i < 4; i++)
             {
                 Versenyzo v = new Versenyzo();
                 v.VersenyzoID = i + 1;
+                v.LoID = rnd.Next(LoDB()+1);
                 Versenyzok.Add(v);
 
             }
+        }
+
+        public int LoDB()
+        {
+            int i = (from x in context.Horses
+                     select x).Count();
+          
+            return i;
         }
     }
 }

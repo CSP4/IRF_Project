@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoversenySzimulator.Entities
 {
-    class versenyzo
+    class Versenyzo
     {
         public int VersenyzoID { get; set; }
         public int LoID { get; set; }
