@@ -36,11 +36,15 @@ namespace LoversenySzimulator
 
             Random rnd = new Random();
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Versenyzo v = new Versenyzo();
                 v.VersenyzoID = i + 1;
                 v.LoID = rnd.Next(LoDB()+1);
+                v.LoNev = LoNev(v.LoID);
+                v.ZsokeID = rnd.Next(ZsokeDB() + 1);
+                v.Zsokenev = ZsokeNev(v.ZsokeID);
+                
                 Versenyzok.Add(v);
 
             }
@@ -59,6 +63,22 @@ namespace LoversenySzimulator
             string s = (from x in context.Horses
                         where x.HorseID == id
                         select x.HorseName).FirstOrDefault();
+            return s;
+        }
+
+        public int ZsokeDB()
+        {
+            int i = (from x in context.Jockeys
+                     select x).Count();
+
+            return i;
+        }
+
+        public string ZsokeNev(int id)
+        {
+            string s = (from x in context.Jockeys
+                        where x.JockeyID == id
+                        select x.JockeyName).FirstOrDefault();
             return s;
         }
     }
