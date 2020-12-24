@@ -63,8 +63,10 @@ namespace LoversenySzimulator
                 } while (ugyanaz);
 
                 v.Zsokenev = ZsokeNev(v.ZsokeID);
-                
 
+                v.LoEredmeny = LoEredmeny(v.LoID);
+
+                v.ZsokeEredmeny = ZsokeEredmeny(v.ZsokeID);
 
                 Versenyzok.Add(v);
 
