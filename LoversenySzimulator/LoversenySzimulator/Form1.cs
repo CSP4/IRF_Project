@@ -53,5 +53,13 @@ namespace LoversenySzimulator
           
             return i;
         }
+
+        public string LoNev(int id)
+        {
+            string s = (from x in context.Horses
+                        where x.HorseID == id
+                        select x.HorseName).FirstOrDefault();
+            return s;
+        }
     }
 }
