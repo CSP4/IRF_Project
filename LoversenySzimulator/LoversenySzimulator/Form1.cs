@@ -123,8 +123,9 @@ namespace LoversenySzimulator
                         where x.H5 == id
                         select x).Count();
 
-
-            return ((elso*5+masodik*4+harmadik*3+negyedik*2+otodik*1)/(elso+masodik+harmadik+negyedik+otodik));
+            if (elso + masodik + harmadik + negyedik + otodik != 0)
+                return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) / (elso + masodik + harmadik + negyedik + otodik));
+            else return 3;
         }
 
         public int ZsokeEredmeny(int id)
@@ -145,8 +146,11 @@ namespace LoversenySzimulator
                           where x.J5 == id
                           select x).Count();
 
+            if (elso + masodik + harmadik + negyedik + otodik != 0)
+                return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) / (elso + masodik + harmadik + negyedik + otodik));
+            else return 3;
 
-            return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) / (elso + masodik + harmadik + negyedik + otodik));
+
         }
     }
 }
