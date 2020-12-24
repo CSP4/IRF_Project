@@ -70,12 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\fogadas.cs" />
-    <Compile Include="Entities\lovacska.cs">
+    <Compile Include="Entities\Fogadas.cs" />
+    <Compile Include="Entities\Lovacska.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Entities\versenyzo.cs" />
-    <Compile Include="Entities\versenyzointerface.cs">
+    <Compile Include="Entities\Versenyzo.cs" />
+    <Compile Include="Entities\Versenyzointerface.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.cs">

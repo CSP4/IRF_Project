@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelVersenyzok = new System.Windows.Forms.Panel();
             this.panelFogadasTipus.SuspendLayout();
             this.panel3as.SuspendLayout();
             this.panelHelyezes.SuspendLayout();
@@ -67,6 +68,7 @@
             this.buttonUjVerseny.TabIndex = 1;
             this.buttonUjVerseny.Text = "Új Verseny";
             this.buttonUjVerseny.UseVisualStyleBackColor = true;
+            this.buttonUjVerseny.Click += new System.EventHandler(this.buttonUjVerseny_Click);
             // 
             // buttonVersenyStart
             // 
@@ -133,7 +135,7 @@
             this.panelHelyezes.Enabled = false;
             this.panelHelyezes.Location = new System.Drawing.Point(173, 12);
             this.panelHelyezes.Name = "panelHelyezes";
-            this.panelHelyezes.Size = new System.Drawing.Size(218, 172);
+            this.panelHelyezes.Size = new System.Drawing.Size(218, 173);
             this.panelHelyezes.TabIndex = 5;
             // 
             // label5
@@ -221,11 +223,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "1.hely";
             // 
+            // panelVersenyzok
+            // 
+            this.panelVersenyzok.Location = new System.Drawing.Point(398, 12);
+            this.panelVersenyzok.Name = "panelVersenyzok";
+            this.panelVersenyzok.Size = new System.Drawing.Size(401, 173);
+            this.panelVersenyzok.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelVersenyzok);
             this.Controls.Add(this.panelHelyezes);
             this.Controls.Add(this.panel3as);
             this.Controls.Add(this.panelFogadasTipus);
@@ -264,6 +274,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxVersenyzo;
         private System.Windows.Forms.ComboBox comboBoxHelyezes;
+        private System.Windows.Forms.Panel panelVersenyzok;
     }
 }
 
