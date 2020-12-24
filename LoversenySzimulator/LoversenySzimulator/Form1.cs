@@ -124,5 +124,27 @@ namespace LoversenySzimulator
 
             return ((elso*5+masodik*4+harmadik*3+negyedik*2+otodik*1)/(elso+masodik+harmadik+negyedik+otodik));
         }
+
+        public int ZsokeEredmeny(int id)
+        {
+            int elso = (from x in context.Races
+                        where x.J1 == id
+                        select x).Count();
+            int masodik = (from x in context.Races
+                           where x.J2 == id
+                           select x).Count();
+            int harmadik = (from x in context.Races
+                            where x.J3 == id
+                            select x).Count();
+            int negyedik = (from x in context.Races
+                            where x.J4 == id
+                            select x).Count();
+            int otodik = (from x in context.Races
+                          where x.J5 == id
+                          select x).Count();
+
+
+            return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) / (elso + masodik + harmadik + negyedik + otodik));
+        }
     }
 }
