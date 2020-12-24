@@ -35,14 +35,32 @@ namespace LoversenySzimulator
 
 
             Random rnd = new Random();
+            bool ugyanaz = false;
 
             for (int i = 0; i < 5; i++)
             {
                 Versenyzo v = new Versenyzo();
                 v.VersenyzoID = i + 1;
-                v.LoID = rnd.Next(LoDB()+1);
+                do
+                {
+                    ugyanaz = false;
+                    v.LoID = rnd.Next(LoDB() + 1);
+                    for (int j = 0; j < Versenyzok.Count(); j++)
+                    {
+                        if (Versenyzok[j].LoID==v.LoID) ugyanaz = true;
+                    }
+                } while (ugyanaz);
                 v.LoNev = LoNev(v.LoID);
-                v.ZsokeID = rnd.Next(ZsokeDB() + 1);
+                
+                do
+                {
+                    ugyanaz = false;
+                    v.ZsokeID = rnd.Next(LoDB() + 1);
+                    for (int j = 0; j < Versenyzok.Count(); j++)
+                    {
+                        if (Versenyzok[j].ZsokeID == v.ZsokeID) ugyanaz = true;
+                    }
+                } while (ugyanaz);
                 v.Zsokenev = ZsokeNev(v.ZsokeID);
                 
                 Versenyzok.Add(v);
