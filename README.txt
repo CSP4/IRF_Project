@@ -6,7 +6,7 @@ Versenyzők sorsolása/létrehozása adatbázisból -> versenyzo class (versenyz
  -> Zsoké hozzárendelés
  -> Versenyeredmények átlagolása és hozzárendelés
 lovacska class : label (a versenyző képe a pályán)
-Versenyzők kiírása a felületre -> versenyzointerface class : button (kijelző versenyző adatainak)
+Versenyzők kiírása a felületre -> versenyzointerface class : label (kijelző versenyző adatainak)
 Fogadásitípus vállasztás
 Fogadás class (a fogadás adatai)
 Verseny indítása
