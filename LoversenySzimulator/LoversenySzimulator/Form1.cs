@@ -70,6 +70,22 @@ namespace LoversenySzimulator
 
                 Versenyzok.Add(v);
 
+                Versenyzointerface vi = new Versenyzointerface();
+                vi.VersenyzoID = v.VersenyzoID;
+                vi.Text = "Ló: " + v.LoNev + "\nZsoké:" + v.Zsokenev + "\nSzint: " + v.Eredmeny;
+                Image imageFile = Image.FromFile("Images/lo"+vi.VersenyzoID+".png");
+                vi.BackgroundImage = imageFile;
+                VersenyzoGombok.Add(vi);
+
+                Lovacska lo = new Lovacska();
+                lo.VersenyzoID = v.VersenyzoID;
+                Babuk.Add(lo);
+
+            }
+
+            for (int k = 0; k < VersenyzoGombok.Count; k++)
+            {
+                panelVersenyzok.Controls.Add(VersenyzoGombok[k]);
             }
         }
 
@@ -149,8 +165,6 @@ namespace LoversenySzimulator
             if (elso + masodik + harmadik + negyedik + otodik != 0)
                 return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) / (elso + masodik + harmadik + negyedik + otodik));
             else return 3;
-
-
         }
     }
 }

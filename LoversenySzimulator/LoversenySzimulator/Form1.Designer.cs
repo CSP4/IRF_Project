@@ -57,7 +57,7 @@
             this.panelPalya.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelPalya.Location = new System.Drawing.Point(0, 191);
             this.panelPalya.Name = "panelPalya";
-            this.panelPalya.Size = new System.Drawing.Size(799, 259);
+            this.panelPalya.Size = new System.Drawing.Size(1013, 374);
             this.panelPalya.TabIndex = 0;
             // 
             // buttonUjVerseny
@@ -227,14 +227,14 @@
             // 
             this.panelVersenyzok.Location = new System.Drawing.Point(398, 12);
             this.panelVersenyzok.Name = "panelVersenyzok";
-            this.panelVersenyzok.Size = new System.Drawing.Size(401, 173);
+            this.panelVersenyzok.Size = new System.Drawing.Size(602, 173);
             this.panelVersenyzok.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1012, 565);
             this.Controls.Add(this.panelVersenyzok);
             this.Controls.Add(this.panelHelyezes);
             this.Controls.Add(this.panel3as);
