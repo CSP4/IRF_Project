@@ -55,7 +55,7 @@ namespace LoversenySzimulator
                 do
                 {
                     ugyanaz = false;
-                    v.ZsokeID = rnd.Next(LoDB()) + 1;
+                    v.ZsokeID = rnd.Next(ZsokeDB()) + 1;
                     for (int j = 0; j < Versenyzok.Count(); j++)
                     {
                         if (Versenyzok[j].ZsokeID == v.ZsokeID) ugyanaz = true;
