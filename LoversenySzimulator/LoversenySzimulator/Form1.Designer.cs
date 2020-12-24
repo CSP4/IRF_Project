@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelPalya = new System.Windows.Forms.Panel();
             this.buttonUjVerseny = new System.Windows.Forms.Button();
             this.buttonVersenyStart = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelVersenyzok = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelFogadasTipus.SuspendLayout();
             this.panel3as.SuspendLayout();
             this.panelHelyezes.SuspendLayout();
@@ -150,6 +152,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label4.Location = new System.Drawing.Point(13, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
@@ -230,6 +233,12 @@
             this.panelVersenyzok.Size = new System.Drawing.Size(602, 173);
             this.panelVersenyzok.TabIndex = 6;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -275,6 +284,7 @@
         private System.Windows.Forms.ComboBox comboBoxVersenyzo;
         private System.Windows.Forms.ComboBox comboBoxHelyezes;
         private System.Windows.Forms.Panel panelVersenyzok;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

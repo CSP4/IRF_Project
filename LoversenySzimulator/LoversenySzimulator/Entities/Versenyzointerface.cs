@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using System.Windows.Forms;
 
 namespace LoversenySzimulator.Entities
 {
-    class Versenyzointerface : Button
+    class Versenyzointerface : Label
     {
         public int VersenyzoID { get; set; }
 
@@ -21,15 +22,11 @@ namespace LoversenySzimulator.Entities
                 _aktive = value;
                 if (_aktive)
                 {
-                    FlatStyle = FlatStyle.Flat;
-                    FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-                    FlatAppearance.BorderSize = 3;
+                    BorderStyle = BorderStyle.Fixed3D;
                 }
                 else
                 {
-                    FlatStyle = FlatStyle.Standard;
-                    FlatAppearance.BorderColor = System.Drawing.Color.White;
-                    FlatAppearance.BorderSize = 1;
+                    BorderStyle = BorderStyle.None;
                 } 
             }
         }
@@ -37,6 +34,7 @@ namespace LoversenySzimulator.Entities
         {
             Height = 110;
             Width = 75;
+            BackColor = Color.LightSalmon;
         }
 
     }

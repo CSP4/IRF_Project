@@ -44,7 +44,7 @@ namespace LoversenySzimulator
                 do
                 {
                     ugyanaz = false;
-                    v.LoID = rnd.Next(LoDB() + 1);
+                    v.LoID = rnd.Next(LoDB()) + 1;
                     for (int j = 0; j < Versenyzok.Count(); j++)
                     {
                         if (Versenyzok[j].LoID==v.LoID) ugyanaz = true;
@@ -55,7 +55,7 @@ namespace LoversenySzimulator
                 do
                 {
                     ugyanaz = false;
-                    v.ZsokeID = rnd.Next(LoDB() + 1);
+                    v.ZsokeID = rnd.Next(LoDB()) + 1;
                     for (int j = 0; j < Versenyzok.Count(); j++)
                     {
                         if (Versenyzok[j].ZsokeID == v.ZsokeID) ugyanaz = true;
@@ -68,13 +68,16 @@ namespace LoversenySzimulator
 
                 v.ZsokeEredmeny = ZsokeEredmeny(v.ZsokeID);
 
+                v.Eredmeny = default;
+
                 Versenyzok.Add(v);
 
                 Versenyzointerface vi = new Versenyzointerface();
                 vi.VersenyzoID = v.VersenyzoID;
-                vi.Text = "Ló: " + v.LoNev + "\nZsoké:" + v.Zsokenev + "\nSzint: " + v.Eredmeny;
-                Image imageFile = Image.FromFile("Images/lo"+vi.VersenyzoID+".png");
-                vi.BackgroundImage = imageFile;
+                vi.Text = "Ló: " + v.LoNev + "Zsoké:" + v.Zsokenev + "Szint: " + v.Eredmeny;
+                Image imageFile = Image.FromFile("Images/lo" + vi.VersenyzoID + ".png");
+                vi.Image = imageFile;
+                vi.ImageAlign = ContentAlignment.BottomCenter;
                 VersenyzoGombok.Add(vi);
 
                 Lovacska lo = new Lovacska();
@@ -85,7 +88,7 @@ namespace LoversenySzimulator
 
             for (int k = 0; k < VersenyzoGombok.Count; k++)
             {
-                VersenyzoGombok[k].Left = k * VersenyzoGombok[k].Width + 5;
+                VersenyzoGombok[k].Left = k * (VersenyzoGombok[k].Width + 5);
                 panelVersenyzok.Controls.Add(VersenyzoGombok[k]);
             }
         }
