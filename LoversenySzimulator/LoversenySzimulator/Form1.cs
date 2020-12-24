@@ -61,8 +61,11 @@ namespace LoversenySzimulator
                         if (Versenyzok[j].ZsokeID == v.ZsokeID) ugyanaz = true;
                     }
                 } while (ugyanaz);
+
                 v.Zsokenev = ZsokeNev(v.ZsokeID);
                 
+
+
                 Versenyzok.Add(v);
 
             }
@@ -98,6 +101,28 @@ namespace LoversenySzimulator
                         where x.JockeyID == id
                         select x.JockeyName).FirstOrDefault();
             return s;
+        }
+
+        public int LoEredmeny(int id)
+        {
+            int elso = (from x in context.Races
+                        where x.H1 == id
+                        select x).Count();
+            int masodik = (from x in context.Races
+                        where x.H2 == id
+                        select x).Count();
+            int harmadik = (from x in context.Races
+                        where x.H3 == id
+                        select x).Count();
+            int negyedik = (from x in context.Races
+                        where x.H4 == id
+                        select x).Count();
+            int otodik = (from x in context.Races
+                        where x.H5 == id
+                        select x).Count();
+
+
+            return ((elso*5+masodik*4+harmadik*3+negyedik*2+otodik*1)/(elso+masodik+harmadik+negyedik+otodik));
         }
     }
 }
