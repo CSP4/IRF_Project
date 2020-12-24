@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LoversenyAdatbazisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Horses">
+          <Key>
+            <PropertyRef Name="HorseID" />
+          </Key>
+          <Property Name="HorseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HorseName" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Jockeys">
+          <Key>
+            <PropertyRef Name="JockeyID" />
+          </Key>
+          <Property Name="JockeyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JockeyName" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Races">
+          <Key>
+            <PropertyRef Name="RaceID" />
+          </Key>
+          <Property Name="RaceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="H1" Type="int" Nullable="false" />
+          <Property Name="J1" Type="int" Nullable="false" />
+          <Property Name="H2" Type="int" Nullable="false" />
+          <Property Name="J2" Type="int" Nullable="false" />
+          <Property Name="H3" Type="int" Nullable="false" />
+          <Property Name="J3" Type="int" Nullable="false" />
+          <Property Name="H4" Type="int" Nullable="false" />
+          <Property Name="J4" Type="int" Nullable="false" />
+          <Property Name="H5" Type="int" Nullable="false" />
+          <Property Name="J5" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_H1_HorseID">
+          <End Role="Horses" Type="Self.Horses" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H2_HorseID">
+          <End Role="Horses" Type="Self.Horses" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H3_HorseID">
+          <End Role="Horses" Type="Self.Horses" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H4_HorseID">
+          <End Role="Horses" Type="Self.Horses" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H5_HorseID">
+          <End Role="Horses" Type="Self.Horses" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J1_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockeys" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J2_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockeys" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J3_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockeys" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J4_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockeys" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J5_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockeys" Multiplicity="1" />
+          <End Role="Races" Type="Self.Races" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LoversenyAdatbazisModelStoreContainer">
+          <EntitySet Name="Horses" EntityType="Self.Horses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jockeys" EntityType="Self.Jockeys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Races" EntityType="Self.Races" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_H1_HorseID" Association="Self.FK_H1_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H2_HorseID" Association="Self.FK_H2_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H3_HorseID" Association="Self.FK_H3_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H4_HorseID" Association="Self.FK_H4_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H5_HorseID" Association="Self.FK_H5_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J1_JockeyID" Association="Self.FK_J1_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J2_JockeyID" Association="Self.FK_J2_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J3_JockeyID" Association="Self.FK_J3_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J4_JockeyID" Association="Self.FK_J4_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J5_JockeyID" Association="Self.FK_J5_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LoversenyAdatbazisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hors">
+          <Key>
+            <PropertyRef Name="HorseID" />
+          </Key>
+          <Property Name="HorseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HorseName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Races" Relationship="Self.FK_H1_HorseID" FromRole="Horses" ToRole="Races" />
+          <NavigationProperty Name="Races1" Relationship="Self.FK_H2_HorseID" FromRole="Horses" ToRole="Races" />
+          <NavigationProperty Name="Races2" Relationship="Self.FK_H3_HorseID" FromRole="Horses" ToRole="Races" />
+          <NavigationProperty Name="Races3" Relationship="Self.FK_H4_HorseID" FromRole="Horses" ToRole="Races" />
+          <NavigationProperty Name="Races4" Relationship="Self.FK_H5_HorseID" FromRole="Horses" ToRole="Races" />
+        </EntityType>
+        <EntityType Name="Jockey">
+          <Key>
+            <PropertyRef Name="JockeyID" />
+          </Key>
+          <Property Name="JockeyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JockeyName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Races" Relationship="Self.FK_J1_JockeyID" FromRole="Jockeys" ToRole="Races" />
+          <NavigationProperty Name="Races1" Relationship="Self.FK_J2_JockeyID" FromRole="Jockeys" ToRole="Races" />
+          <NavigationProperty Name="Races2" Relationship="Self.FK_J3_JockeyID" FromRole="Jockeys" ToRole="Races" />
+          <NavigationProperty Name="Races3" Relationship="Self.FK_J4_JockeyID" FromRole="Jockeys" ToRole="Races" />
+          <NavigationProperty Name="Races4" Relationship="Self.FK_J5_JockeyID" FromRole="Jockeys" ToRole="Races" />
+        </EntityType>
+        <EntityType Name="Race">
+          <Key>
+            <PropertyRef Name="RaceID" />
+          </Key>
+          <Property Name="RaceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="H1" Type="Int32" Nullable="false" />
+          <Property Name="J1" Type="Int32" Nullable="false" />
+          <Property Name="H2" Type="Int32" Nullable="false" />
+          <Property Name="J2" Type="Int32" Nullable="false" />
+          <Property Name="H3" Type="Int32" Nullable="false" />
+          <Property Name="J3" Type="Int32" Nullable="false" />
+          <Property Name="H4" Type="Int32" Nullable="false" />
+          <Property Name="J4" Type="Int32" Nullable="false" />
+          <Property Name="H5" Type="Int32" Nullable="false" />
+          <Property Name="J5" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Hors" Relationship="Self.FK_H1_HorseID" FromRole="Races" ToRole="Horses" />
+          <NavigationProperty Name="Hors1" Relationship="Self.FK_H2_HorseID" FromRole="Races" ToRole="Horses" />
+          <NavigationProperty Name="Hors2" Relationship="Self.FK_H3_HorseID" FromRole="Races" ToRole="Horses" />
+          <NavigationProperty Name="Hors3" Relationship="Self.FK_H4_HorseID" FromRole="Races" ToRole="Horses" />
+          <NavigationProperty Name="Hors4" Relationship="Self.FK_H5_HorseID" FromRole="Races" ToRole="Horses" />
+          <NavigationProperty Name="Jockey" Relationship="Self.FK_J1_JockeyID" FromRole="Races" ToRole="Jockeys" />
+          <NavigationProperty Name="Jockey1" Relationship="Self.FK_J2_JockeyID" FromRole="Races" ToRole="Jockeys" />
+          <NavigationProperty Name="Jockey2" Relationship="Self.FK_J3_JockeyID" FromRole="Races" ToRole="Jockeys" />
+          <NavigationProperty Name="Jockey3" Relationship="Self.FK_J4_JockeyID" FromRole="Races" ToRole="Jockeys" />
+          <NavigationProperty Name="Jockey4" Relationship="Self.FK_J5_JockeyID" FromRole="Races" ToRole="Jockeys" />
+        </EntityType>
+        <Association Name="FK_H1_HorseID">
+          <End Role="Horses" Type="Self.Hors" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H2_HorseID">
+          <End Role="Horses" Type="Self.Hors" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H3_HorseID">
+          <End Role="Horses" Type="Self.Hors" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H4_HorseID">
+          <End Role="Horses" Type="Self.Hors" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_H5_HorseID">
+          <End Role="Horses" Type="Self.Hors" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horses">
+              <PropertyRef Name="HorseID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="H5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J1_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockey" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J2_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockey" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J3_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockey" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J4_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockey" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_J5_JockeyID">
+          <End Role="Jockeys" Type="Self.Jockey" Multiplicity="1" />
+          <End Role="Races" Type="Self.Race" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jockeys">
+              <PropertyRef Name="JockeyID" />
+            </Principal>
+            <Dependent Role="Races">
+              <PropertyRef Name="J5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LoversenyAdatbazisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Horses" EntityType="Self.Hors" />
+          <EntitySet Name="Jockeys" EntityType="Self.Jockey" />
+          <EntitySet Name="Races" EntityType="Self.Race" />
+          <AssociationSet Name="FK_H1_HorseID" Association="Self.FK_H1_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H2_HorseID" Association="Self.FK_H2_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H3_HorseID" Association="Self.FK_H3_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H4_HorseID" Association="Self.FK_H4_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_H5_HorseID" Association="Self.FK_H5_HorseID">
+            <End Role="Horses" EntitySet="Horses" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J1_JockeyID" Association="Self.FK_J1_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J2_JockeyID" Association="Self.FK_J2_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J3_JockeyID" Association="Self.FK_J3_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J4_JockeyID" Association="Self.FK_J4_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+          <AssociationSet Name="FK_J5_JockeyID" Association="Self.FK_J5_JockeyID">
+            <End Role="Jockeys" EntitySet="Jockeys" />
+            <End Role="Races" EntitySet="Races" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LoversenyAdatbazisModelStoreContainer" CdmEntityContainer="LoversenyAdatbazisEntities">
+          <EntitySetMapping Name="Horses">
+            <EntityTypeMapping TypeName="LoversenyAdatbazisModel.Hors">
+              <MappingFragment StoreEntitySet="Horses">
+                <ScalarProperty Name="HorseID" ColumnName="HorseID" />
+                <ScalarProperty Name="HorseName" ColumnName="HorseName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jockeys">
+            <EntityTypeMapping TypeName="LoversenyAdatbazisModel.Jockey">
+              <MappingFragment StoreEntitySet="Jockeys">
+                <ScalarProperty Name="JockeyID" ColumnName="JockeyID" />
+                <ScalarProperty Name="JockeyName" ColumnName="JockeyName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Races">
+            <EntityTypeMapping TypeName="LoversenyAdatbazisModel.Race">
+              <MappingFragment StoreEntitySet="Races">
+                <ScalarProperty Name="RaceID" ColumnName="RaceID" />
+                <ScalarProperty Name="H1" ColumnName="H1" />
+                <ScalarProperty Name="J1" ColumnName="J1" />
+                <ScalarProperty Name="H2" ColumnName="H2" />
+                <ScalarProperty Name="J2" ColumnName="J2" />
+                <ScalarProperty Name="H3" ColumnName="H3" />
+                <ScalarProperty Name="J3" ColumnName="J3" />
+                <ScalarProperty Name="H4" ColumnName="H4" />
+                <ScalarProperty Name="J4" ColumnName="J4" />
+                <ScalarProperty Name="H5" ColumnName="H5" />
+                <ScalarProperty Name="J5" ColumnName="J5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

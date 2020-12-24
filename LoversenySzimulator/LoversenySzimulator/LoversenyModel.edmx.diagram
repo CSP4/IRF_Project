@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8be5de3e0c8f4f8c869a20cded2fcd3f" Name="Diagram1">
+        <EntityTypeShape EntityType="LoversenyAdatbazisModel.Hors" Width="1.5" PointX="0.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoversenyAdatbazisModel.Jockey" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LoversenyAdatbazisModel.Race" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_H1_HorseID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_H2_HorseID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_H3_HorseID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_H4_HorseID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_H5_HorseID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_J1_JockeyID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_J2_JockeyID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_J3_JockeyID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_J4_JockeyID" ManuallyRouted="false" />
+        <AssociationConnector Association="LoversenyAdatbazisModel.FK_J5_JockeyID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
