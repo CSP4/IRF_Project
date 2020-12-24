@@ -85,6 +85,7 @@ namespace LoversenySzimulator
 
             for (int k = 0; k < VersenyzoGombok.Count; k++)
             {
+                VersenyzoGombok[k].Left = k * VersenyzoGombok[k].Width + 5;
                 panelVersenyzok.Controls.Add(VersenyzoGombok[k]);
             }
         }
