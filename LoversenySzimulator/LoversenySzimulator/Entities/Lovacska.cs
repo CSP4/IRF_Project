@@ -7,8 +7,17 @@ using System.Windows.Forms;
 
 namespace LoversenySzimulator.Entities
 {
+
     class Lovacska : Label
     {
         public int VersenyzoID { get; set; }
+        public Lovacska()
+        {
+            AutoSize = false;
+
+        }
     }
+
+
+
 }
