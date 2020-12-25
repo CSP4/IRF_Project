@@ -17,6 +17,7 @@ namespace LoversenySzimulator
         List<Lovacska> Babuk = new List<Lovacska>();
         List<Versenyzo> Versenyzok = new List<Versenyzo>();
         List<Versenyzointerface> VersenyzoGombok = new List<Versenyzointerface>();
+        List<int> Befuto = new List<int>();
         Fogadas f = new Fogadas();
         bool ujverseny;
         public Form1()
@@ -31,13 +32,23 @@ namespace LoversenySzimulator
             Random rnd = new Random();
             bool ugyanaz = false;
 
+            ujverseny = true;
+
+            Babuk.Clear();
+            Versenyzok.Clear();
+            VersenyzoGombok.Clear();
+            Befuto.Clear();
+            panelVersenyzok.Controls.Clear();
+            panelPalya.Controls.Clear();
+            radioHelyezes.Checked = true;
+
             panel3as.Enabled = true;
             panelHelyezes.Enabled = true;
             panelFogadasTipus.Enabled = true;
             buttonUjVerseny.Enabled = false;
             buttonVersenyStart.Enabled = true;
 
-            ujverseny = true;
+            
             comboBoxVersenyzo.SelectedIndex = 0;
             comboBoxHelyezes.SelectedIndex = 0;
             comboBox1hely.SelectedIndex = 0;
@@ -187,20 +198,28 @@ namespace LoversenySzimulator
         {
             panel3as.Top = 12;
             panelHelyezes.Top = -175;
-            VersenyzoGombok[f.VersenyzoID].Aktive = false;
-            VersenyzoGombok[f.Elso].Aktive = true;
-            VersenyzoGombok[f.Masodik].Aktive = true;
-            VersenyzoGombok[f.Harmadik].Aktive = true;
+            if (!ujverseny)
+            {
+                VersenyzoGombok[f.VersenyzoID].Aktive = false;
+                VersenyzoGombok[f.Elso].Aktive = true;
+                VersenyzoGombok[f.Masodik].Aktive = true;
+                VersenyzoGombok[f.Harmadik].Aktive = true;
+            }
         }
+
 
         private void radioHelyezes_CheckedChanged(object sender, EventArgs e)
         {
+
             panel3as.Top = -175;
             panelHelyezes.Top = 12;
-            VersenyzoGombok[f.Elso].Aktive = false;
-            VersenyzoGombok[f.Masodik].Aktive = false;
-            VersenyzoGombok[f.Harmadik].Aktive = false;
-            VersenyzoGombok[f.VersenyzoID].Aktive = true;
+            if (!ujverseny)
+            {
+                VersenyzoGombok[f.Elso].Aktive = false;
+                VersenyzoGombok[f.Masodik].Aktive = false;
+                VersenyzoGombok[f.Harmadik].Aktive = false;
+                VersenyzoGombok[f.VersenyzoID].Aktive = true;
+            }
         }
 
         private void comboBox1hely_SelectedIndexChanged(object sender, EventArgs e)
@@ -296,10 +315,25 @@ namespace LoversenySzimulator
 
         private void timerFutam_Tick(object sender, EventArgs e)
         {
+            Random rnd = new Random();
             for (int i = 0; i < Babuk.Count; i++)
             {
-                if (Babuk[i].Left < 908) Babuk[i].Fut(Versenyzok[i].Eredmeny);
-                else Babuk[i].Left = 908;
+                if (!Babuk[i].Beerte)
+                {
+                    if (Babuk[i].Left < 908) Babuk[i].Fut(Versenyzok[i].Eredmeny);
+                    else
+                    {
+                        Babuk[i].Left = 908;
+                        Befuto.Add(Babuk[i].VersenyzoID);
+                        Babuk[i].Beerte = true;
+                    }
+                }
+            }
+            if (Befuto.Count==5)
+            {
+                timerFutam.Enabled = false;
+                MessageBox.Show("Vége a versenynek");
+                buttonUjVerseny.Enabled = true;                
             }
         }
     }

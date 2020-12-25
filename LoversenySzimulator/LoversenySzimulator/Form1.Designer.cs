@@ -293,6 +293,7 @@
             // 
             // timerFutam
             // 
+            this.timerFutam.Interval = 10;
             this.timerFutam.Tick += new System.EventHandler(this.timerFutam_Tick);
             // 
             // Form1

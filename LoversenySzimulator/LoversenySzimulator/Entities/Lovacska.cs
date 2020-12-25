@@ -12,6 +12,7 @@ namespace LoversenySzimulator.Entities
     class Lovacska : Label
     {
         public int VersenyzoID { get; set; }
+        public bool Beerte { get; set; }
         public Lovacska()
         {
             AutoSize = false;
@@ -19,6 +20,7 @@ namespace LoversenySzimulator.Entities
             Height = 19;
             Paint += Lovacska_Paint;
             BackColor = Color.Transparent;
+            Beerte = false;
         }
 
         private void Lovacska_Paint(object sender, PaintEventArgs e)
@@ -35,7 +37,7 @@ namespace LoversenySzimulator.Entities
         public void Fut(int szint)
         {
             Random rnd = new Random();
-            Left+=rnd.Next(szint) + 5;
+            Left+=rnd.Next(szint)+5;
         }
     }
 
