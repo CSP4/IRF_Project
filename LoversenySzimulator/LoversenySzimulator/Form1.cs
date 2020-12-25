@@ -156,7 +156,7 @@ namespace LoversenySzimulator
                         select x).Count();
 
             if (elso + masodik + harmadik + negyedik + otodik != 0)
-                return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) * 3 / (elso + masodik + harmadik + negyedik + otodik));
+                return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) * 2 / (elso + masodik + harmadik + negyedik + otodik));
             else return 7;
         }
 
@@ -179,7 +179,7 @@ namespace LoversenySzimulator
                           select x).Count();
 
             if (elso + masodik + harmadik + negyedik + otodik != 0)
-                return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) * 3 / (elso + masodik + harmadik + negyedik + otodik));
+                return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) * 2 / (elso + masodik + harmadik + negyedik + otodik));
             else return 7;
         }
 
@@ -280,11 +280,26 @@ namespace LoversenySzimulator
 
         private void buttonVersenyStart_Click(object sender, EventArgs e)
         {
+            panel3as.Enabled = false;
+            panelHelyezes.Enabled = false;
+            panelFogadasTipus.Enabled = false;
+            buttonVersenyStart.Enabled = false;
+
             for (int i = 0; i < Babuk.Count; i++)
             {
                 panelPalya.Controls.Add(Babuk[i]);
                 Babuk[i].Top = 41 * (i+1) + ((3 - i) * 2);
                 Babuk[i].Left = 1;
+            }
+            timerFutam.Enabled = true;
+        }
+
+        private void timerFutam_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Babuk.Count; i++)
+            {
+                if (Babuk[i].Left < 908) Babuk[i].Fut(Versenyzok[i].Eredmeny);
+                else Babuk[i].Left = 908;
             }
         }
     }

@@ -32,9 +32,10 @@ namespace LoversenySzimulator.Entities
             g.DrawImage(imageFile, new Rectangle(0, 0, Width, Height));
         }
 
-        public void LovacskaMove()
+        public void Fut(int szint)
         {
-            Left++;
+            Random rnd = new Random();
+            Left+=rnd.Next(szint) + 5;
         }
     }
 

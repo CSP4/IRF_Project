@@ -48,7 +48,7 @@
             this.comboBoxVersenyzo = new System.Windows.Forms.ComboBox();
             this.comboBoxHelyezes = new System.Windows.Forms.ComboBox();
             this.panelVersenyzok = new System.Windows.Forms.Panel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.timerFutam = new System.Windows.Forms.Timer(this.components);
             this.panelFogadasTipus.SuspendLayout();
             this.panel3as.SuspendLayout();
             this.panelHelyezes.SuspendLayout();
@@ -291,11 +291,9 @@
             this.panelVersenyzok.Size = new System.Drawing.Size(450, 112);
             this.panelVersenyzok.TabIndex = 6;
             // 
-            // imageList1
+            // timerFutam
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.timerFutam.Tick += new System.EventHandler(this.timerFutam_Tick);
             // 
             // Form1
             // 
@@ -344,7 +342,7 @@
         private System.Windows.Forms.ComboBox comboBoxVersenyzo;
         private System.Windows.Forms.ComboBox comboBoxHelyezes;
         private System.Windows.Forms.Panel panelVersenyzok;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Timer timerFutam;
     }
 }
 
