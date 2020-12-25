@@ -174,6 +174,7 @@
             this.comboBoxVersenyzo.Name = "comboBoxVersenyzo";
             this.comboBoxVersenyzo.Size = new System.Drawing.Size(181, 28);
             this.comboBoxVersenyzo.TabIndex = 1;
+            this.comboBoxVersenyzo.SelectedIndexChanged += new System.EventHandler(this.comboBoxVersenyzo_SelectedIndexChanged);
             // 
             // comboBoxHelyezes
             // 
@@ -188,6 +189,7 @@
             this.comboBoxHelyezes.Name = "comboBoxHelyezes";
             this.comboBoxHelyezes.Size = new System.Drawing.Size(181, 28);
             this.comboBoxHelyezes.TabIndex = 0;
+            this.comboBoxHelyezes.SelectedIndexChanged += new System.EventHandler(this.comboBoxHelyezes_SelectedIndexChanged);
             // 
             // comboBox3hely
             // 
@@ -278,6 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LimeGreen;
             this.ClientSize = new System.Drawing.Size(1012, 565);
             this.Controls.Add(this.panelVersenyzok);
             this.Controls.Add(this.panelHelyezes);
