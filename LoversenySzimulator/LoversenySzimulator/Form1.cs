@@ -31,6 +31,11 @@ namespace LoversenySzimulator
             panelFogadasTipus.Enabled = true;
             buttonUjVerseny.Enabled = false;
             buttonVersenyStart.Enabled = true;
+            comboBoxVersenyzo.SelectedIndex = 0;
+            comboBoxHelyezes.SelectedIndex = 0;
+            comboBox1hely.SelectedIndex = 0;
+            comboBox2hely.SelectedIndex = 1;
+            comboBox3hely.SelectedIndex = 2;
 
 
 
@@ -74,7 +79,7 @@ namespace LoversenySzimulator
 
                 Versenyzointerface vi = new Versenyzointerface();
                 vi.VersenyzoID = v.VersenyzoID;
-                vi.Text = "Ló: " + v.LoNev + "Zsoké:" + v.Zsokenev + "Szint: " + v.Eredmeny;
+                vi.Text = "Ló:" + v.LoNev + "Zsoké:" + v.Zsokenev + "Szint: " + v.Eredmeny;
                 Image imageFile = Image.FromFile("Images/lo" + vi.VersenyzoID + ".png");
                 vi.Image = imageFile;
                 vi.ImageAlign = ContentAlignment.BottomCenter;
@@ -169,6 +174,18 @@ namespace LoversenySzimulator
             if (elso + masodik + harmadik + negyedik + otodik != 0)
                 return ((elso * 5 + masodik * 4 + harmadik * 3 + negyedik * 2 + otodik * 1) / (elso + masodik + harmadik + negyedik + otodik));
             else return 3;
+        }
+
+        private void radio3as_CheckedChanged(object sender, EventArgs e)
+        {
+            panel3as.Top = 12;
+            panelHelyezes.Top = -175;
+        }
+
+        private void radioHelyezes_CheckedChanged(object sender, EventArgs e)
+        {
+            panel3as.Top = -175;
+            panelHelyezes.Top = 12;
         }
     }
 }

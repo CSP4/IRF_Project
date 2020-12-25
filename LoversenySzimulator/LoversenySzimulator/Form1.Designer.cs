@@ -101,6 +101,7 @@
             this.radio3as.TabIndex = 1;
             this.radio3as.Text = "3as befutó";
             this.radio3as.UseVisualStyleBackColor = true;
+            this.radio3as.CheckedChanged += new System.EventHandler(this.radio3as_CheckedChanged);
             // 
             // radioHelyezes
             // 
@@ -113,6 +114,7 @@
             this.radioHelyezes.TabStop = true;
             this.radioHelyezes.Text = "Helyezés";
             this.radioHelyezes.UseVisualStyleBackColor = true;
+            this.radioHelyezes.CheckedChanged += new System.EventHandler(this.radioHelyezes_CheckedChanged);
             // 
             // panel3as
             // 
@@ -162,6 +164,12 @@
             // comboBoxVersenyzo
             // 
             this.comboBoxVersenyzo.FormattingEnabled = true;
+            this.comboBoxVersenyzo.Items.AddRange(new object[] {
+            "1. Versenyző",
+            "2. Versenyző",
+            "3. Versenyző",
+            "4. Versenyző",
+            "5. Versenyző"});
             this.comboBoxVersenyzo.Location = new System.Drawing.Point(17, 128);
             this.comboBoxVersenyzo.Name = "comboBoxVersenyzo";
             this.comboBoxVersenyzo.Size = new System.Drawing.Size(181, 28);
@@ -170,6 +178,12 @@
             // comboBoxHelyezes
             // 
             this.comboBoxHelyezes.FormattingEnabled = true;
+            this.comboBoxHelyezes.Items.AddRange(new object[] {
+            "1. Hely",
+            "2. Hely",
+            "3. Hely",
+            "4. Hely",
+            "5. Hely"});
             this.comboBoxHelyezes.Location = new System.Drawing.Point(17, 47);
             this.comboBoxHelyezes.Name = "comboBoxHelyezes";
             this.comboBoxHelyezes.Size = new System.Drawing.Size(181, 28);
@@ -178,6 +192,12 @@
             // comboBox3hely
             // 
             this.comboBox3hely.FormattingEnabled = true;
+            this.comboBox3hely.Items.AddRange(new object[] {
+            "1. Versenyző",
+            "2. Versenyző",
+            "3. Versenyző",
+            "4. Versenyző",
+            "5. Versenyző"});
             this.comboBox3hely.Location = new System.Drawing.Point(61, 131);
             this.comboBox3hely.Name = "comboBox3hely";
             this.comboBox3hely.Size = new System.Drawing.Size(150, 28);
@@ -186,6 +206,12 @@
             // comboBox2hely
             // 
             this.comboBox2hely.FormattingEnabled = true;
+            this.comboBox2hely.Items.AddRange(new object[] {
+            "1. Versenyző",
+            "2. Versenyző",
+            "3. Versenyző",
+            "4. Versenyző",
+            "5. Versenyző"});
             this.comboBox2hely.Location = new System.Drawing.Point(61, 73);
             this.comboBox2hely.Name = "comboBox2hely";
             this.comboBox2hely.Size = new System.Drawing.Size(150, 28);
@@ -194,6 +220,12 @@
             // comboBox1hely
             // 
             this.comboBox1hely.FormattingEnabled = true;
+            this.comboBox1hely.Items.AddRange(new object[] {
+            "1. Versenyző",
+            "2. Versenyző",
+            "3. Versenyző",
+            "4. Versenyző",
+            "5. Versenyző"});
             this.comboBox1hely.Location = new System.Drawing.Point(60, 13);
             this.comboBox1hely.Name = "comboBox1hely";
             this.comboBox1hely.Size = new System.Drawing.Size(151, 28);

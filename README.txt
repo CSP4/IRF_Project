@@ -7,6 +7,7 @@ Kezdő felület felépítése
  -> Fogadó felület (változik a típus választás függvényében)
  -> Játékosok adatai panel
  -> Futópálya
+ -> Eredmény kijelző tábla
 
 Új verseny gomb megnyomás (buttonUjVerseny_Click)
  -> Eddig minden más felület disabled innentől lesz aktív (első verseny után ezzel lehet reset-elni a felületet)
