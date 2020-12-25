@@ -23,10 +23,11 @@ Kezdő felület felépítése
  -> VersenyzoInterface lista feltöltése ezen fog megjelenni a képen az adatok (class Versenyzointerface : Label)
  -> VersenyzoInterfacek kirajzolása a felületre
  -> Versenyző Babuk feltöltéltese azonosítóval és a hozzá tartozó bábú képével (class Lovacska : Label)
-
+ -> Fogadás típusok szerint feltölteni adattala fogadást (class Fogadas)
 
 Fogadásitípus vállasztás
-Fogadás class (a fogadás adatai)
+ -> A fogadás adatainak változását lerögzíten a fogadásban és a fogadásban szerepl versenyzők interface-ének kiemelése és ezek válzotásainak kezelése (combobox-ok SelectedIndexChange eseményei és a Fogadas class aktive property setter eseménye)
+
 Verseny indítása
 Verseny szimulálása
 Verseny lezárása
