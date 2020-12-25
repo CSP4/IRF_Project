@@ -277,5 +277,15 @@ namespace LoversenySzimulator
                 VersenyzoGombok[f.VersenyzoID].Aktive = true;
             }
         }
+
+        private void buttonVersenyStart_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Babuk.Count; i++)
+            {
+                panelPalya.Controls.Add(Babuk[i]);
+                Babuk[i].Top = 41 * (i+1) + ((3 - i) * 2);
+                Babuk[i].Left = 1;
+            }
+        }
     }
 }

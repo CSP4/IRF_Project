@@ -33,7 +33,7 @@ namespace LoversenySzimulator.Entities
         public Versenyzointerface()
         {
             Height = 110;
-            Width = 75;
+            Width = 80;
             BackColor = Color.LightSalmon;
         }
 

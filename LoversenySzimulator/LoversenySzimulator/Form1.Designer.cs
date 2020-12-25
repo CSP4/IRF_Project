@@ -85,6 +85,7 @@
             this.buttonVersenyStart.TabIndex = 2;
             this.buttonVersenyStart.Text = "Verseny Indítása";
             this.buttonVersenyStart.UseVisualStyleBackColor = true;
+            this.buttonVersenyStart.Click += new System.EventHandler(this.buttonVersenyStart_Click);
             // 
             // panelFogadasTipus
             // 
