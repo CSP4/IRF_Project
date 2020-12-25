@@ -202,6 +202,7 @@
             this.comboBox3hely.Name = "comboBox3hely";
             this.comboBox3hely.Size = new System.Drawing.Size(150, 28);
             this.comboBox3hely.TabIndex = 5;
+            this.comboBox3hely.SelectedIndexChanged += new System.EventHandler(this.comboBox3hely_SelectedIndexChanged);
             // 
             // comboBox2hely
             // 
@@ -216,6 +217,7 @@
             this.comboBox2hely.Name = "comboBox2hely";
             this.comboBox2hely.Size = new System.Drawing.Size(150, 28);
             this.comboBox2hely.TabIndex = 4;
+            this.comboBox2hely.SelectedIndexChanged += new System.EventHandler(this.comboBox2hely_SelectedIndexChanged);
             // 
             // comboBox1hely
             // 
@@ -230,6 +232,7 @@
             this.comboBox1hely.Name = "comboBox1hely";
             this.comboBox1hely.Size = new System.Drawing.Size(151, 28);
             this.comboBox1hely.TabIndex = 3;
+            this.comboBox1hely.SelectedIndexChanged += new System.EventHandler(this.comboBox1hely_SelectedIndexChanged);
             // 
             // label3
             // 

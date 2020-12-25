@@ -187,5 +187,47 @@ namespace LoversenySzimulator
             panel3as.Top = -175;
             panelHelyezes.Top = 12;
         }
+
+        private void comboBox1hely_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1hely.SelectedIndex==comboBox2hely.SelectedIndex)
+            {
+                if (comboBox2hely.SelectedIndex < 4) comboBox2hely.SelectedIndex ++;
+                else comboBox2hely.SelectedIndex = 0;
+            }
+            if (comboBox1hely.SelectedIndex == comboBox3hely.SelectedIndex)
+            {
+                if (comboBox3hely.SelectedIndex < 4) comboBox3hely.SelectedIndex ++;
+                else comboBox3hely.SelectedIndex = 0;
+            }
+        }
+
+        private void comboBox2hely_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2hely.SelectedIndex == comboBox1hely.SelectedIndex)
+            {
+                if (comboBox1hely.SelectedIndex < 4) comboBox1hely.SelectedIndex++;
+                else comboBox1hely.SelectedIndex = 0;
+            }
+            if (comboBox2hely.SelectedIndex == comboBox3hely.SelectedIndex)
+            {
+                if (comboBox3hely.SelectedIndex < 4) comboBox3hely.SelectedIndex++;
+                else comboBox3hely.SelectedIndex = 0;
+            }
+        }
+
+        private void comboBox3hely_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox3hely.SelectedIndex == comboBox1hely.SelectedIndex)
+            {
+                if (comboBox1hely.SelectedIndex < 4) comboBox1hely.SelectedIndex++;
+                else comboBox1hely.SelectedIndex = 0;
+            }
+            if (comboBox3hely.SelectedIndex == comboBox2hely.SelectedIndex)
+            {
+                if (comboBox2hely.SelectedIndex < 4) comboBox2hely.SelectedIndex++;
+                else comboBox2hely.SelectedIndex = 0;
+            }
+        }
     }
 }
