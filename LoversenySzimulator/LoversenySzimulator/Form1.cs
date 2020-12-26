@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -339,8 +340,39 @@ namespace LoversenySzimulator
                 timerFutam.Enabled = false;
                 eredmenyJelzo();
                 fogadasErtekeles();
+                eredmenyCSVbe();
+                eredmenyAdatBbe();
                 buttonUjVerseny.Enabled = true;
             }
+        }
+
+        private void eredmenyAdatBbe()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void eredmenyCSVbe()
+        {
+            string FileName = @"c:\Temp\LovesenySzimulatorMentettCSVk\" + DateTime.Now.ToString("yyyy_MM_dd_h_m_s") + ".csv";
+            using (StreamWriter sw = new StreamWriter(FileName, false, Encoding.UTF8))
+            {
+                sw.Write("Helyezés");
+                sw.Write(";");
+                sw.Write("Ló");
+                sw.Write(";");
+                sw.Write("Zsoké");
+                sw.WriteLine();
+                for (int i = 0; i < Befuto.Count; i++)
+                {
+                    sw.Write(i+1);
+                    sw.Write(";");
+                    sw.Write(Versenyzok[Befuto[i]].LoNev);
+                    sw.Write(";");
+                    sw.Write(Versenyzok[Befuto[i]].Zsokenev);
+                    sw.WriteLine();
+                }
+            }
+            MessageBox.Show("CSV-be mentés sikerült "+FileName+" helyen és néven");
         }
 
         private void fogadasErtekeles()

@@ -44,6 +44,8 @@ Verseny lezárása
  
 
 Eredmeny kiírás csv-be és utána mentése az adatbázisba
+ -> Eredmény kiírás CSV fájl-ba (eredmenyCSVbe)
+ -> Adatbázis firssítése az eredményekkel (eredmenyAdatBbe)
  
 
 Újversenynél a felület alaphelyzetbe állítása
