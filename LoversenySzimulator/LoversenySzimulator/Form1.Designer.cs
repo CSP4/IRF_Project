@@ -136,6 +136,7 @@
             // panel3as
             // 
             this.panel3as.BackColor = System.Drawing.Color.LightGreen;
+            this.panel3as.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3as.Controls.Add(this.comboBox3hely);
             this.panel3as.Controls.Add(this.comboBox2hely);
             this.panel3as.Controls.Add(this.comboBox1hely);
@@ -146,7 +147,7 @@
             this.panel3as.Location = new System.Drawing.Point(115, -114);
             this.panel3as.Margin = new System.Windows.Forms.Padding(2);
             this.panel3as.Name = "panel3as";
-            this.panel3as.Size = new System.Drawing.Size(145, 112);
+            this.panel3as.Size = new System.Drawing.Size(150, 112);
             this.panel3as.TabIndex = 4;
             // 
             // comboBox3hely
@@ -239,7 +240,7 @@
             this.panelHelyezes.Location = new System.Drawing.Point(115, 8);
             this.panelHelyezes.Margin = new System.Windows.Forms.Padding(2);
             this.panelHelyezes.Name = "panelHelyezes";
-            this.panelHelyezes.Size = new System.Drawing.Size(145, 112);
+            this.panelHelyezes.Size = new System.Drawing.Size(150, 112);
             this.panelHelyezes.TabIndex = 5;
             // 
             // label5

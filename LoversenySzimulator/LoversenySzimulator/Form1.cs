@@ -201,7 +201,7 @@ namespace LoversenySzimulator
 
         private void radio3as_CheckedChanged(object sender, EventArgs e)
         {
-            panel3as.Top = 12;
+            panel3as.Top = 8;
             panelHelyezes.Top = -175;
             if (!ujverseny)
             {
@@ -217,7 +217,7 @@ namespace LoversenySzimulator
         {
 
             panel3as.Top = -175;
-            panelHelyezes.Top = 12;
+            panelHelyezes.Top = 8;
             if (!ujverseny)
             {
                 VersenyzoGombok[f.Elso].Aktive = false;
@@ -337,14 +337,33 @@ namespace LoversenySzimulator
             if (Befuto.Count==5)
             {
                 timerFutam.Enabled = false;
-                labelElso.Text = labelElso.Text + (Befuto[0] + 1).ToString()+". Versenyző";
-                labelMasodik.Text = labelMasodik.Text + (Befuto[1] + 1).ToString() + ". Versenyző";
-                labelHarmadik.Text = labelHarmadik.Text + (Befuto[2] + 1).ToString() + ". Versenyző";
-                labelNegyedik.Text = labelNegyedik.Text + (Befuto[3] + 1).ToString() + ". Versenyző";
-                labelOtodik.Text = labelOtodik.Text + (Befuto[4] + 1).ToString() + ". Versenyző";
-                MessageBox.Show("Vége a versenynek");
-                buttonUjVerseny.Enabled = true;                
+                eredmenyJelzo();
+                fogadasErtekeles();
+                buttonUjVerseny.Enabled = true;
             }
+        }
+
+        private void fogadasErtekeles()
+        {
+            if (radioHelyezes.Checked)
+            {
+                if (Befuto[f.Helyezes] == f.VersenyzoID) MessageBox.Show("Ez igen! Éles helyzetben ezzel a fogadással pénzt kereshetsz.");
+                else MessageBox.Show("Sajnos most nem volt szerencséd. De mivel ez csak egy szimulátor, ha mindened elveszett akkor is újra próbálkozhatsz ;)");
+            }
+            else
+            {
+                if ((Befuto[0]==f.Elso) && (Befuto[1] == f.Masodik) && (Befuto[2] == f.Harmadik)) MessageBox.Show("Ez igen! Éles helyzetben ezzel a fogadással egy kisebb vagyont kereshetsz.");
+                else MessageBox.Show("Sajnos most nem volt szerencséd. De mivel ez csak egy szimulátor, ha mindened elveszett akkor is újra próbálkozhatsz ;)");
+            }
+        }
+
+        private void eredmenyJelzo()
+        {
+            labelElso.Text = labelElso.Text + (Befuto[0] + 1).ToString() + ". Versenyző";
+            labelMasodik.Text = labelMasodik.Text + (Befuto[1] + 1).ToString() + ". Versenyző";
+            labelHarmadik.Text = labelHarmadik.Text + (Befuto[2] + 1).ToString() + ". Versenyző";
+            labelNegyedik.Text = labelNegyedik.Text + (Befuto[3] + 1).ToString() + ". Versenyző";
+            labelOtodik.Text = labelOtodik.Text + (Befuto[4] + 1).ToString() + ". Versenyző";
         }
     }
 }
