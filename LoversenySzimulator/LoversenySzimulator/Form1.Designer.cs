@@ -49,9 +49,16 @@
             this.comboBoxHelyezes = new System.Windows.Forms.ComboBox();
             this.panelVersenyzok = new System.Windows.Forms.Panel();
             this.timerFutam = new System.Windows.Forms.Timer(this.components);
+            this.panelEredmeny = new System.Windows.Forms.Panel();
+            this.labelElso = new System.Windows.Forms.Label();
+            this.labelMasodik = new System.Windows.Forms.Label();
+            this.labelHarmadik = new System.Windows.Forms.Label();
+            this.labelNegyedik = new System.Windows.Forms.Label();
+            this.labelOtodik = new System.Windows.Forms.Label();
             this.panelFogadasTipus.SuspendLayout();
             this.panel3as.SuspendLayout();
             this.panelHelyezes.SuspendLayout();
+            this.panelEredmeny.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPalya
@@ -59,7 +66,7 @@
             this.panelPalya.BackColor = System.Drawing.Color.Black;
             this.panelPalya.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelPalya.Location = new System.Drawing.Point(5, 124);
-            this.panelPalya.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPalya.Margin = new System.Windows.Forms.Padding(2);
             this.panelPalya.Name = "panelPalya";
             this.panelPalya.Size = new System.Drawing.Size(1000, 272);
             this.panelPalya.TabIndex = 0;
@@ -67,7 +74,7 @@
             // buttonUjVerseny
             // 
             this.buttonUjVerseny.Location = new System.Drawing.Point(8, 8);
-            this.buttonUjVerseny.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUjVerseny.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUjVerseny.Name = "buttonUjVerseny";
             this.buttonUjVerseny.Size = new System.Drawing.Size(103, 25);
             this.buttonUjVerseny.TabIndex = 1;
@@ -79,7 +86,7 @@
             // 
             this.buttonVersenyStart.Enabled = false;
             this.buttonVersenyStart.Location = new System.Drawing.Point(8, 36);
-            this.buttonVersenyStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVersenyStart.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVersenyStart.Name = "buttonVersenyStart";
             this.buttonVersenyStart.Size = new System.Drawing.Size(103, 25);
             this.buttonVersenyStart.TabIndex = 2;
@@ -89,11 +96,13 @@
             // 
             // panelFogadasTipus
             // 
+            this.panelFogadasTipus.BackColor = System.Drawing.Color.LightGreen;
+            this.panelFogadasTipus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFogadasTipus.Controls.Add(this.radio3as);
             this.panelFogadasTipus.Controls.Add(this.radioHelyezes);
             this.panelFogadasTipus.Enabled = false;
             this.panelFogadasTipus.Location = new System.Drawing.Point(9, 66);
-            this.panelFogadasTipus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelFogadasTipus.Margin = new System.Windows.Forms.Padding(2);
             this.panelFogadasTipus.Name = "panelFogadasTipus";
             this.panelFogadasTipus.Size = new System.Drawing.Size(103, 55);
             this.panelFogadasTipus.TabIndex = 3;
@@ -102,7 +111,7 @@
             // 
             this.radio3as.AutoSize = true;
             this.radio3as.Location = new System.Drawing.Point(11, 29);
-            this.radio3as.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio3as.Margin = new System.Windows.Forms.Padding(2);
             this.radio3as.Name = "radio3as";
             this.radio3as.Size = new System.Drawing.Size(75, 17);
             this.radio3as.TabIndex = 1;
@@ -115,7 +124,7 @@
             this.radioHelyezes.AutoSize = true;
             this.radioHelyezes.Checked = true;
             this.radioHelyezes.Location = new System.Drawing.Point(11, 9);
-            this.radioHelyezes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioHelyezes.Margin = new System.Windows.Forms.Padding(2);
             this.radioHelyezes.Name = "radioHelyezes";
             this.radioHelyezes.Size = new System.Drawing.Size(68, 17);
             this.radioHelyezes.TabIndex = 0;
@@ -126,6 +135,7 @@
             // 
             // panel3as
             // 
+            this.panel3as.BackColor = System.Drawing.Color.LightGreen;
             this.panel3as.Controls.Add(this.comboBox3hely);
             this.panel3as.Controls.Add(this.comboBox2hely);
             this.panel3as.Controls.Add(this.comboBox1hely);
@@ -134,7 +144,7 @@
             this.panel3as.Controls.Add(this.label1);
             this.panel3as.Enabled = false;
             this.panel3as.Location = new System.Drawing.Point(115, -114);
-            this.panel3as.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3as.Margin = new System.Windows.Forms.Padding(2);
             this.panel3as.Name = "panel3as";
             this.panel3as.Size = new System.Drawing.Size(145, 112);
             this.panel3as.TabIndex = 4;
@@ -149,7 +159,7 @@
             "4. Versenyző",
             "5. Versenyző"});
             this.comboBox3hely.Location = new System.Drawing.Point(41, 85);
-            this.comboBox3hely.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3hely.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3hely.Name = "comboBox3hely";
             this.comboBox3hely.Size = new System.Drawing.Size(101, 21);
             this.comboBox3hely.TabIndex = 5;
@@ -165,7 +175,7 @@
             "4. Versenyző",
             "5. Versenyző"});
             this.comboBox2hely.Location = new System.Drawing.Point(41, 47);
-            this.comboBox2hely.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2hely.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2hely.Name = "comboBox2hely";
             this.comboBox2hely.Size = new System.Drawing.Size(101, 21);
             this.comboBox2hely.TabIndex = 4;
@@ -181,7 +191,7 @@
             "4. Versenyző",
             "5. Versenyző"});
             this.comboBox1hely.Location = new System.Drawing.Point(40, 8);
-            this.comboBox1hely.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1hely.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1hely.Name = "comboBox1hely";
             this.comboBox1hely.Size = new System.Drawing.Size(102, 21);
             this.comboBox1hely.TabIndex = 3;
@@ -219,13 +229,15 @@
             // 
             // panelHelyezes
             // 
+            this.panelHelyezes.BackColor = System.Drawing.Color.LightGreen;
+            this.panelHelyezes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelHelyezes.Controls.Add(this.label5);
             this.panelHelyezes.Controls.Add(this.label4);
             this.panelHelyezes.Controls.Add(this.comboBoxVersenyzo);
             this.panelHelyezes.Controls.Add(this.comboBoxHelyezes);
             this.panelHelyezes.Enabled = false;
             this.panelHelyezes.Location = new System.Drawing.Point(115, 8);
-            this.panelHelyezes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHelyezes.Margin = new System.Windows.Forms.Padding(2);
             this.panelHelyezes.Name = "panelHelyezes";
             this.panelHelyezes.Size = new System.Drawing.Size(145, 112);
             this.panelHelyezes.TabIndex = 5;
@@ -261,7 +273,7 @@
             "4. Versenyző",
             "5. Versenyző"});
             this.comboBoxVersenyzo.Location = new System.Drawing.Point(11, 83);
-            this.comboBoxVersenyzo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxVersenyzo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxVersenyzo.Name = "comboBoxVersenyzo";
             this.comboBoxVersenyzo.Size = new System.Drawing.Size(122, 21);
             this.comboBoxVersenyzo.TabIndex = 1;
@@ -277,7 +289,7 @@
             "4. Hely",
             "5. Hely"});
             this.comboBoxHelyezes.Location = new System.Drawing.Point(11, 31);
-            this.comboBoxHelyezes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxHelyezes.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxHelyezes.Name = "comboBoxHelyezes";
             this.comboBoxHelyezes.Size = new System.Drawing.Size(122, 21);
             this.comboBoxHelyezes.TabIndex = 0;
@@ -285,10 +297,12 @@
             // 
             // panelVersenyzok
             // 
-            this.panelVersenyzok.Location = new System.Drawing.Point(265, 8);
-            this.panelVersenyzok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelVersenyzok.BackColor = System.Drawing.Color.LightGreen;
+            this.panelVersenyzok.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelVersenyzok.Location = new System.Drawing.Point(317, 8);
+            this.panelVersenyzok.Margin = new System.Windows.Forms.Padding(2);
             this.panelVersenyzok.Name = "panelVersenyzok";
-            this.panelVersenyzok.Size = new System.Drawing.Size(450, 112);
+            this.panelVersenyzok.Size = new System.Drawing.Size(425, 112);
             this.panelVersenyzok.TabIndex = 6;
             // 
             // timerFutam
@@ -296,12 +310,77 @@
             this.timerFutam.Interval = 10;
             this.timerFutam.Tick += new System.EventHandler(this.timerFutam_Tick);
             // 
+            // panelEredmeny
+            // 
+            this.panelEredmeny.BackColor = System.Drawing.Color.Black;
+            this.panelEredmeny.Controls.Add(this.labelOtodik);
+            this.panelEredmeny.Controls.Add(this.labelNegyedik);
+            this.panelEredmeny.Controls.Add(this.labelHarmadik);
+            this.panelEredmeny.Controls.Add(this.labelMasodik);
+            this.panelEredmeny.Controls.Add(this.labelElso);
+            this.panelEredmeny.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panelEredmeny.Location = new System.Drawing.Point(802, 8);
+            this.panelEredmeny.Name = "panelEredmeny";
+            this.panelEredmeny.Size = new System.Drawing.Size(200, 111);
+            this.panelEredmeny.TabIndex = 7;
+            // 
+            // labelElso
+            // 
+            this.labelElso.AutoSize = true;
+            this.labelElso.ForeColor = System.Drawing.Color.OliveDrab;
+            this.labelElso.Location = new System.Drawing.Point(44, 7);
+            this.labelElso.Name = "labelElso";
+            this.labelElso.Size = new System.Drawing.Size(33, 13);
+            this.labelElso.TabIndex = 0;
+            this.labelElso.Text = "Elso: ";
+            // 
+            // labelMasodik
+            // 
+            this.labelMasodik.AutoSize = true;
+            this.labelMasodik.ForeColor = System.Drawing.Color.YellowGreen;
+            this.labelMasodik.Location = new System.Drawing.Point(44, 27);
+            this.labelMasodik.Name = "labelMasodik";
+            this.labelMasodik.Size = new System.Drawing.Size(53, 13);
+            this.labelMasodik.TabIndex = 1;
+            this.labelMasodik.Text = "Masodik: ";
+            // 
+            // labelHarmadik
+            // 
+            this.labelHarmadik.AutoSize = true;
+            this.labelHarmadik.ForeColor = System.Drawing.Color.Yellow;
+            this.labelHarmadik.Location = new System.Drawing.Point(44, 49);
+            this.labelHarmadik.Name = "labelHarmadik";
+            this.labelHarmadik.Size = new System.Drawing.Size(58, 13);
+            this.labelHarmadik.TabIndex = 2;
+            this.labelHarmadik.Text = "Harmadik: ";
+            // 
+            // labelNegyedik
+            // 
+            this.labelNegyedik.AutoSize = true;
+            this.labelNegyedik.ForeColor = System.Drawing.Color.DarkOrange;
+            this.labelNegyedik.Location = new System.Drawing.Point(44, 71);
+            this.labelNegyedik.Name = "labelNegyedik";
+            this.labelNegyedik.Size = new System.Drawing.Size(58, 13);
+            this.labelNegyedik.TabIndex = 3;
+            this.labelNegyedik.Text = "Negyedik: ";
+            // 
+            // labelOtodik
+            // 
+            this.labelOtodik.AutoSize = true;
+            this.labelOtodik.ForeColor = System.Drawing.Color.OrangeRed;
+            this.labelOtodik.Location = new System.Drawing.Point(44, 92);
+            this.labelOtodik.Name = "labelOtodik";
+            this.labelOtodik.Size = new System.Drawing.Size(44, 13);
+            this.labelOtodik.TabIndex = 4;
+            this.labelOtodik.Text = "Ötödik: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LimeGreen;
             this.ClientSize = new System.Drawing.Size(1014, 411);
+            this.Controls.Add(this.panelEredmeny);
             this.Controls.Add(this.panelVersenyzok);
             this.Controls.Add(this.panelHelyezes);
             this.Controls.Add(this.panel3as);
@@ -309,7 +388,7 @@
             this.Controls.Add(this.buttonVersenyStart);
             this.Controls.Add(this.buttonUjVerseny);
             this.Controls.Add(this.panelPalya);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Lóverseny Szimulátor";
             this.panelFogadasTipus.ResumeLayout(false);
@@ -318,6 +397,8 @@
             this.panel3as.PerformLayout();
             this.panelHelyezes.ResumeLayout(false);
             this.panelHelyezes.PerformLayout();
+            this.panelEredmeny.ResumeLayout(false);
+            this.panelEredmeny.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -344,6 +425,12 @@
         private System.Windows.Forms.ComboBox comboBoxHelyezes;
         private System.Windows.Forms.Panel panelVersenyzok;
         private System.Windows.Forms.Timer timerFutam;
+        private System.Windows.Forms.Panel panelEredmeny;
+        private System.Windows.Forms.Label labelOtodik;
+        private System.Windows.Forms.Label labelNegyedik;
+        private System.Windows.Forms.Label labelHarmadik;
+        private System.Windows.Forms.Label labelMasodik;
+        private System.Windows.Forms.Label labelElso;
     }
 }
 

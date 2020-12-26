@@ -48,7 +48,12 @@ namespace LoversenySzimulator
             buttonUjVerseny.Enabled = false;
             buttonVersenyStart.Enabled = true;
 
-            
+            labelElso.Text = "Első: ";
+            labelMasodik.Text = "Második: ";
+            labelHarmadik.Text = "Harmadik: ";
+            labelNegyedik.Text = "Negyedik: ";
+            labelOtodik.Text = "Ötödik: ";
+
             comboBoxVersenyzo.SelectedIndex = 0;
             comboBoxHelyezes.SelectedIndex = 0;
             comboBox1hely.SelectedIndex = 0;
@@ -332,6 +337,11 @@ namespace LoversenySzimulator
             if (Befuto.Count==5)
             {
                 timerFutam.Enabled = false;
+                labelElso.Text = labelElso.Text + (Befuto[0] + 1).ToString()+". Versenyző";
+                labelMasodik.Text = labelMasodik.Text + (Befuto[1] + 1).ToString() + ". Versenyző";
+                labelHarmadik.Text = labelHarmadik.Text + (Befuto[2] + 1).ToString() + ". Versenyző";
+                labelNegyedik.Text = labelNegyedik.Text + (Befuto[3] + 1).ToString() + ". Versenyző";
+                labelOtodik.Text = labelOtodik.Text + (Befuto[4] + 1).ToString() + ". Versenyző";
                 MessageBox.Show("Vége a versenynek");
                 buttonUjVerseny.Enabled = true;                
             }

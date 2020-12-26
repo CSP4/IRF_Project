@@ -29,7 +29,22 @@ Fogadásitípus vállasztás
  -> A fogadás adatainak változását lerögzíten a fogadásban és a fogadásban szerepl versenyzők interface-ének kiemelése és ezek válzotásainak kezelése (combobox-ok SelectedIndexChange eseményei és a Fogadas class aktive property setter eseménye)
 
 Verseny indítása
+ -> Minden kezelő felület disabled lesz
+ -> A Bábuk megjelennek a megfelelő sávban a palyaPanel-hez hozzáadva (Lovacska.Paint)
+ -> A futamTimer enabledbe kerül
+
 Verseny szimulálása
+ -> A lovacska class Fut eseményével a versenyző szintjét randomizálva végig mennek a bábúk a pályán.
+
 Verseny lezárása
+ -> Ha valamelyik babu eléri a célvonalat nem fut tovább
+ -> A befuto listába bekerül sorrendben, hogy ki hányadik helyen végzett
+
 Eredmeny kiírás csv-be és utána mentése az adatbázisba
+ 
+
 Újversenynél a felület alaphelyzetbe állítása
+ -> Minden visszaállítás alaphelyzetbe
+ -> Listák kiürítése
+ -> panelVersenyzok és panelPalya kiürítése
+ -> radio buttonok és comboBoxok alaphelyzetbe állítása 
