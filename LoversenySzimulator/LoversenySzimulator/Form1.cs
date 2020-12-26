@@ -348,9 +348,31 @@ namespace LoversenySzimulator
 
         private void eredmenyAdatBbe()
         {
-            throw new NotImplementedException();
-        }
+            Race Eredmenyek = new Race();
 
+            Eredmenyek.H1 = Versenyzok[Befuto[0]].LoID;
+            Eredmenyek.J1 = Versenyzok[Befuto[0]].ZsokeID;
+            Eredmenyek.H2 = Versenyzok[Befuto[1]].LoID;
+            Eredmenyek.J2 = Versenyzok[Befuto[1]].ZsokeID;
+            Eredmenyek.H3 = Versenyzok[Befuto[2]].LoID;
+            Eredmenyek.J3 = Versenyzok[Befuto[2]].ZsokeID;
+            Eredmenyek.H4 = Versenyzok[Befuto[3]].LoID;
+            Eredmenyek.J4 = Versenyzok[Befuto[3]].ZsokeID;
+            Eredmenyek.H5 = Versenyzok[Befuto[4]].LoID;
+            Eredmenyek.J5 = Versenyzok[Befuto[4]].ZsokeID;
+
+            context.Races.Add(Eredmenyek);
+
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
         private void eredmenyCSVbe()
         {
             string FileName = @"c:\Temp\LovesenySzimulatorMentettCSVk\" + DateTime.Now.ToString("yyyy_MM_dd_h_m_s") + ".csv";
@@ -358,7 +380,11 @@ namespace LoversenySzimulator
             {
                 sw.Write("Helyezés");
                 sw.Write(";");
+                sw.Write("Ló ID");
+                sw.Write(";");
                 sw.Write("Ló");
+                sw.Write(";");
+                sw.Write("Zsoké ID");
                 sw.Write(";");
                 sw.Write("Zsoké");
                 sw.WriteLine();
@@ -366,7 +392,11 @@ namespace LoversenySzimulator
                 {
                     sw.Write(i+1);
                     sw.Write(";");
+                    sw.Write(Versenyzok[Befuto[i]].LoID);
+                    sw.Write(";");
                     sw.Write(Versenyzok[Befuto[i]].LoNev);
+                    sw.Write(";");
+                    sw.Write(Versenyzok[Befuto[i]].ZsokeID);
                     sw.Write(";");
                     sw.Write(Versenyzok[Befuto[i]].Zsokenev);
                     sw.WriteLine();
