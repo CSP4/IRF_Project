@@ -39,6 +39,9 @@ Verseny szimulálása
 Verseny lezárása
  -> Ha valamelyik babu eléri a célvonalat nem fut tovább
  -> A befuto listába bekerül sorrendben, hogy ki hányadik helyen végzett
+ -> Ez kiírásra kerül az eredményjelzőre (eredmenyJelzo)
+ -> Fogadás eredméynének kiértékelése (fogadasErtekeles)
+ 
 
 Eredmeny kiírás csv-be és utána mentése az adatbázisba
  
