@@ -395,6 +395,7 @@
             this.Controls.Add(this.buttonUjVerseny);
             this.Controls.Add(this.panelPalya);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Lóverseny Szimulátor";
             this.panelFogadasTipus.ResumeLayout(false);
