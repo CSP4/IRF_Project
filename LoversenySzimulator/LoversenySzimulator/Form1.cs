@@ -375,8 +375,19 @@ namespace LoversenySzimulator
         }
         private void eredmenyCSVbe()
         {
-            string FileName = @"c:\Temp\LovesenySzimulatorMentettCSVk\" + DateTime.Now.ToString("yyyy_MM_dd_h_m_s") + ".csv";
-            using (StreamWriter sw = new StreamWriter(FileName, false, Encoding.UTF8))
+            //string FileName = @"c:\Temp\LovesenySzimulatorMentettCSVk\" + DateTime.Now.ToString("yyyy_MM_dd_h_m_s") + ".csv";
+            //using (StreamWriter sw = new StreamWriter(FileName, false, Encoding.UTF8))
+
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            sfd.InitialDirectory = Application.StartupPath;
+            sfd.Filter = "Comma Seperated Values (*.csv)|*.csv";
+            sfd.DefaultExt = "csv";
+            sfd.AddExtension = true;
+
+            if (sfd.ShowDialog() != DialogResult.OK) return;
+
+            using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
             {
                 sw.Write("Helyezés");
                 sw.Write(";");
@@ -402,7 +413,7 @@ namespace LoversenySzimulator
                     sw.WriteLine();
                 }
             }
-            MessageBox.Show("CSV-be mentés sikerült "+FileName+" helyen és néven");
+            //MessageBox.Show("CSV-be mentés sikerült "+FileName+" helyen és néven");
         }
 
         private void fogadasErtekeles()
