@@ -23,10 +23,12 @@ namespace LoversenySzimulator.Entities
                 if (_aktive)
                 {
                     BackColor= Color.PaleTurquoise;
+                    BorderStyle = BorderStyle.Fixed3D;
                 }
                 else
                 {
                     BackColor = Color.LightSalmon;
+                    BorderStyle = BorderStyle.None;
                 } 
             }
         }
